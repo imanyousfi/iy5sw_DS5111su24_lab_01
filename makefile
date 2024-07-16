@@ -32,4 +32,9 @@ total_words:
 	@echo "Total Words in All Files:"
 	cat book_dict/*.txt | wc -w 
 
+create_env: 
+	python3 -m venv env
+	pip install --upgrade pip 
+	pip install pip 
+	pip install -r requirements.txt
 
