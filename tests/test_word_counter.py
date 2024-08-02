@@ -59,7 +59,7 @@ def all_text_combined():
             all_text_combined += f.read()
     return all_text_combined
 
-pytest.fixture
+@pytest.fixture
 def le_corbeu():
     return "Mais le Corbeau, perché solitairement sur ce buste placide, parlace seul mot comme si, son âme, en ce seul mot, il la répandait. Je ne proférai donc rien de plus: il n'agita donc pas de plume--jusqu'à ce que je fis à peine davantage que marmotter «D'autres amis déjà ontpris leur vol--demain il me laissera comme mes Espérances déjà ontpris leur vol Alors l'oiseau dit"
 
@@ -83,7 +83,7 @@ def test_count_words_fail(sample_text_list):
     assert word_count == Counter({'But': 1, 'the': 2, 'Raven': 1, 'sitting': 1, 'lonely': 1, 'on': 1, 'placid': 1, 'bust': 1, 'spoke': 1, 'only': 1, 'That': 1, 'one': 2, 'word': 2, 'as': 1, 'if': 1, 'his': 1, 'soul': 1, 'in': 1, 'he': 1, 'did': 1, 'outpour': 1}), 'Test failed'
     
 # write test for count word function using raven_text:
-def test_count_words_raven(raven_text_text):
+def test_count_words_raven(raven_text):
     # Given the Raven text string 
     # When I call the count_words function on the Raven file: 
     word_count_raven = count_words(raven_text)
