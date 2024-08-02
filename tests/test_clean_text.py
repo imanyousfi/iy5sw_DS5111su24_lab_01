@@ -63,7 +63,7 @@ def all_text_combined():
 
 pytest.fixture
 def le_corbeu():
-	return return "Mais le Corbeau, perché solitairement sur ce buste placide, parlace seul mot comme si, son âme, en ce seul mot, il la répandait. Je ne proférai donc rien de plus: il n'agita donc pas de plume--jusqu'à ce que je fis à peine davantage que marmotter «D'autres amis déjà ontpris leur vol--demain il me laissera comme mes Espérances déjà ontpris leur vol Alors l'oiseau dit"
+	return "Mais le Corbeau, perché solitairement sur ce buste placide, parlace seul mot comme si, son âme, en ce seul mot, il la répandait. Je ne proférai donc rien de plus: il n'agita donc pas de plume--jusqu'à ce que je fis à peine davantage que marmotter «D'autres amis déjà ontpris leur vol--demain il me laissera comme mes Espérances déjà ontpris leur vol Alors l'oiseau dit"
 
 # Test with a given sample text:
 def test_clean_text(sample_text):
