@@ -25,10 +25,7 @@ def sample_text_list():
 # create a decorator that prints that the test function fails on purpose
 def intentional_fail(func):
     func = pytest.mark.xfail(func)
-    def wrapper(*args, **kwargs):
-        print(f'Test {func.__name__} is failing on purpose')
-        return func(*args, **kwargs)
-    return wrapper
+    
 
 # Raven file: 
 @pytest.fixture
