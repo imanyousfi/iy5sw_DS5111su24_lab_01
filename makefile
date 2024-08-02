@@ -38,3 +38,8 @@ create_env:
 	pip install pip 
 	pip install -r requirements.txt
 
+test:
+	pip install -e .; . env/bin/activate; pytest -vvx tests/
+
+lint: 
+	. env/bin/activate; pylint src/iy5sw/text_tokenizer.py
