@@ -6,7 +6,7 @@ from collections import Counter
 import pytest
 # configure the logging module: 
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s - %(levelname)s - %(message)s')
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+#sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from iy5sw.text_tokenizer import clean_text
 
 #Helper functions:
