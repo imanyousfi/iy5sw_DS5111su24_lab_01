@@ -7,7 +7,7 @@ import pytest
 # configure the logging module: 
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s - %(levelname)s - %(message)s')
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-from text_tokenizer import tokenize 
+from iy5sw.text_tokenizer import tokenize 
 
 #Helper functions:
 
