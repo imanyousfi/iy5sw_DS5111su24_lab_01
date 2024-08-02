@@ -1,4 +1,4 @@
-(https://github.com/imanyousfi/iy5sw_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg?branch=WEEK-05/github_automation)
+! https://github.com/imanyousfi/iy5sw_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg?branch=WEEK-05/github_automation
 # 😎 iy5sw_DS5111su24_lab_01 😎
 Demo Repository for DS511- Data Engineering 
 ## Functionality: 
