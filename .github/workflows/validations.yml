@@ -30,6 +30,6 @@ jobs:
       - name: Test with pytest
         env:
           PYTHONPATH: ./src
-        run: 
+        run: |
           . venv/bin/activate
           pytest -vvx tests/
