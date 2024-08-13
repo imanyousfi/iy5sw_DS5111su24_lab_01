@@ -1,0 +1,35 @@
+name: Python package
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9"]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m venv venv
+          . venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .
+      - name: Get Books
+        run: bash get_the_books.sh
+      - name: Test with pytest
+        env:
+          PYTHONPATH: ./src
+        run: |
+          . venv/bin/activate
+          pytest -vvx tests/

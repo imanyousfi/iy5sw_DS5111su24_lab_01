@@ -1,4 +1,5 @@
 *.txt*
 *books_dict* 
+!requirements.txt 
 
 

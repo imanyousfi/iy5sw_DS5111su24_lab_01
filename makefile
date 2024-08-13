@@ -32,4 +32,14 @@ total_words:
 	@echo "Total Words in All Files:"
 	cat book_dict/*.txt | wc -w 
 
+create_env: 
+	python3 -m venv env
+	pip install --upgrade pip 
+	pip install pip 
+	pip install -r requirements.txt
 
+test:
+	pip install -e .; . env/bin/activate; pytest -vvx tests/
+
+lint: 
+	. env/bin/activate; pylint src/iy5sw/text_tokenizer.py
